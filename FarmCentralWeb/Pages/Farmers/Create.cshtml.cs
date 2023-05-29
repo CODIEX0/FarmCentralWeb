@@ -33,6 +33,9 @@ namespace FarmCentralWeb.Pages.Farmers
                 //emptying the textboxes and populating the success message
                 farmer.Name = ""; farmer.Password = "";
                 successMessage = "New Farmer Successfully Added!";
+
+                //redirecting the user to the modules index page
+                Response.Redirect("/Index");
             }
             catch (Exception ex)
             {

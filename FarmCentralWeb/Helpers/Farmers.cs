@@ -5,6 +5,7 @@ using System.Linq;
 
 namespace FarmCentralWeb.Helpers
 {
+    //code attribution https://learn.microsoft.com/en-us/aspnet/web-api/overview/security/authentication-and-authorization-in-aspnet-web-api
     public class Farmers
     {
         private FarmCentralDBContext dbContext;
@@ -17,7 +18,7 @@ namespace FarmCentralWeb.Helpers
         public List<Farmer> GetAll()
         {           
 
-            return dbContext.Set<Farmer>().ToList();
+            return dbContext.Farmers.ToList();
         }
     }
 }

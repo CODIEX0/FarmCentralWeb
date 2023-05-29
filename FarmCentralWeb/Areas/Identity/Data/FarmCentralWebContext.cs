@@ -7,6 +7,7 @@ namespace FarmCentralWeb.Data;
 
 public class FarmCentralWebContext : DbContext
 {
+    //code attribution  https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/#dbcontextoptions
     private string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=FCDB;Integrated Security=True;Connect Timeout=30;Encrypt=False";
     public FarmCentralWebContext(DbContextOptions<FarmCentralWebContext> options)
         : base(options)

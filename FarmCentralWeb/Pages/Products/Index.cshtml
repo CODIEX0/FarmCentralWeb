@@ -15,18 +15,7 @@
 
 <br>
 
-<label>Filter By Farmer Name</label>
-    <h2></h2>
-
 <form method="POST">
-    <div class="row mb-3">
-        <label class="col-sm-3 col-form-label">FARMER NAME</label>
-        <div class="col-sm-6">
-            <select name="farmer_name" class="form-select" asp-items="Model.farmer_model.FarmerNameSelectList">
-                <option value="Select A Name">Select A Farmer Name</option>
-            </select>
-        </div>
-    </div>
 
 <label>Filter By Product Type</label>
     <h2></h2>
@@ -39,10 +28,7 @@
         </div>
     </div>
 
-<label>Filter By Date Range</label>
-    <h2></h2>
-
-
+    <br>
 
 
     @if (Model.successMessage.Length > 0)

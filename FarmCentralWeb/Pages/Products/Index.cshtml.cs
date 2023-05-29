@@ -20,8 +20,6 @@ namespace FarmCentralWeb.Pages.Products
         public string successMessage = "";        
         public string farmer_name = "";
         public string product_type = "";
-        //creating a farmer view model object
-        public FarmerViewModel farmer_model = new();
         //creating a product view model object
         public ProductViewModel product_model = new();
         //db context object
@@ -42,36 +40,16 @@ namespace FarmCentralWeb.Pages.Products
                 //products list
                 var products = new List<Product>();
 
-                //list to store farmer name's
-                farmer_model.FarmerNameSelectList = new();
                 //list to store product type's
                 product_model.ProductTypeSelectList = new();
 
-                List<string> names = new();                
-                //displaying data to the select list
-                foreach (Farmer farmer in farmerData)
-                {
-                    farmer_model.FarmerNameSelectList.Add(new SelectListItem { Text = "FARMER NAME: ", Value = farmer.Name });
-                    names.Add(farmer.Name);
-                }
 
                 List<string> types = new();
                 foreach (Models.Product product in productData)
                 {
                     product_model.ProductTypeSelectList.Add(new SelectListItem { Text = "PRODUCT TYPE: ", Value = product.Type });
                     types.Add(product.Type);
-                }
-
-                //if a farmer name is not selected, than populate the error message with the error
-                if (names.Count == 0 || names.Equals("Select A Farmer Name"))
-                {
-                    errorMessage = "Select The Farmer's Name To Filter Search!";
-                    return;
-                }
-                else
-                {
-                    farmer_name = Request.Form["farmer_name"];
-                }
+                }                
 
                 if (types.Count == 0 || types.Equals("Select A Product Type"))
                 {

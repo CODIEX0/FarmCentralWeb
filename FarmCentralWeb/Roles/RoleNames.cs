@@ -1,4 +1,4 @@
-﻿namespace FarmCentralWeb.Models
+﻿namespace FarmCentralWeb.Roles
 {
     public class RoleNames
     {
