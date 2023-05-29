@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using NuGet.LibraryModel;
 
-namespace FarmCentralWeb.Pages.Inventory
+namespace FarmCentralWeb.Pages.Products
 {
     public class CreateModel : PageModel
     {

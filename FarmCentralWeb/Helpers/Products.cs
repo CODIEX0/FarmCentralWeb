@@ -7,12 +7,16 @@ namespace FarmCentralWeb.Helpers
 {
     public class Products
     {
-        public static List<Product> listProducts = new();
-        static FarmCentralDBContext context = new();
+        public static FarmCentralDBContext dbContext;
 
-        public static List<Product> GetAll()
+        public Products(FarmCentralDBContext dbContext)
         {
-            return listProducts = context.Products.ToList();
+            Products.dbContext = dbContext;
+        }
+
+        public List<Product> GetAll()
+        {
+            return dbContext.Set<Product>().ToList();
         }
     }
 }

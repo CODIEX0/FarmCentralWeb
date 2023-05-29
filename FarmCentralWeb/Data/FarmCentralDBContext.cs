@@ -1,4 +1,7 @@
-﻿using System.Data.Entity;
+﻿
+using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
+using FarmCentralWeb.Areas.Identity.Data;
 using FarmCentralWeb.Models;
 
 namespace FarmCentralWeb.Data
@@ -14,6 +17,8 @@ namespace FarmCentralWeb.Data
 
         public DbSet<Product> Products { get; set; } 
         public DbSet<Farmer> Farmers { get; set; } 
-        public DbSet<Employee> Employees { get; set; } 
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<FarmCentralWebUser> FarmCentralWebUsers { get; set; }
+        
     }
 }

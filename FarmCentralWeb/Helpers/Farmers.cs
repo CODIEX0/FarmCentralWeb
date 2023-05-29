@@ -7,16 +7,17 @@ namespace FarmCentralWeb.Helpers
 {
     public class Farmers
     {
-        private FarmCentralDBContext context;
+        private FarmCentralDBContext dbContext;
 
         public Farmers(FarmCentralDBContext dbContext)
         {
-            context = dbContext;
+            this.dbContext = dbContext;
         }
 
         public List<Farmer> GetAll()
-        {
-            return context.Farmers.ToList();
+        {           
+
+            return dbContext.Set<Farmer>().ToList();
         }
     }
 }
